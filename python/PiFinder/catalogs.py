@@ -441,9 +441,13 @@ class Catalogs:
     def _rebuild_t9_cache(self, objs: list[CompositeObject]) -> None:
         self._t9_cache = {}
         for obj in objs:
-            self._t9_cache[self._object_cache_key(obj)] = [
-                self._name_to_t9_digits(name) for name in obj.names
-            ]
+            t9_variants = set()
+            for name in obj.names:
+                digits = self._name_to_t9_digits(name)
+                t9_variants.add(digits)
+                t9_variants.add(digits.replace("3", ""))
+
+            self._t9_cache[self._object_cache_key(obj)] = sorted(t9_variants)
         self._t9_cache_dirty = False
 
     def _ensure_t9_cache(self, objs: list[CompositeObject]) -> None:
