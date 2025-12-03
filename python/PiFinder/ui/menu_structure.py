@@ -666,6 +666,10 @@ pifinder_menu = {
                                     "value": "Off",
                                 },
                                 {
+                                    "name": _("Ludicrous"),
+                                    "value": "Ludicrous",
+                                },
+                                {
                                     "name": _("Fast"),
                                     "value": "Fast",
                                 },

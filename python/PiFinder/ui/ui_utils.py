@@ -94,6 +94,7 @@ class TextLayouterSimple:
 class TextLayouterScroll(TextLayouterSimple):
     """To be used as a one-line scrolling text"""
 
+    LUDICROUS = 1500
     FAST = 750
     MEDIUM = 500
     SLOW = 200
