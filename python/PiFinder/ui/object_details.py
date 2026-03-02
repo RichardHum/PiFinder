@@ -129,6 +129,7 @@ class UIObjectDetails(UIModule):
     def _get_scrollspeed_config(self):
         scroll_dict = {
             "Off": 0,
+            "Ludicrous": TextLayouterScroll.LUDICROUS,
             "Fast": TextLayouterScroll.FAST,
             "Med": TextLayouterScroll.MEDIUM,
             "Slow": TextLayouterScroll.SLOW,
